@@ -1,21 +1,128 @@
-body{
-    background-color:antiquewhite
+/* Basic Defaults */
+* {
+    box-sizing: border-box; /* Makes width simpler */
 }
 
+/* Page layout grid */
+html, body{
+    height: 100%; /* Allows full height page */
+    background-color: #ffffff;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header | main | footer */
+    min-height: 100vh; /* full screen height */
+}
+
+/* Content area lenght and center */
+header, main{
+    max-width: 900px;
+    margin: 0 auto; /* center on page */
+    padding: 0 16px; /* side padding */
+}
+
+/* Header styling */
 header{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 12px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #54bc49;
 }
 
-ul{
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
+header h1{
+    margin: 0; font-size: 1.25rem;
+}
+
+nav ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* row for links */
+    gap: 10px;
+    flex-wrap: wrap; /* wrap for small screens */
 }
 
-li a{
+nav a{
+    color: #000000;
     text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+nav a:hover{
+    background: #358ec6;
+}
+
+/* hero, article and contact */
+.hero-section, .about, .services, .contact{
+    background: #d5d8df;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 15px;
+}
+
+
+/* hero-section & article */
+.hero-section, .article{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Contact */
+.contact form{
+    display: grid;
+    gap: 12px;
+}
+
+.contact form > div{
+    display: grid;
+    gap: 6px;
+}
+
+label{
+    font-weight: 600; color: #333;
+}
+
+input, textarea, button{
+    font: inherit; /* default font-family from body */
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px 14px; /* padding for text inside */
+    border: 1px solid #0f766e;
+    border-radius: 6px;
+    background: #fff;
+}
+
+button[type="submit"] {
+  align-items: center;   /* vertical center [web:26] */
+  padding: 10px 14px;
+  border: 1px solid #12847a;
+  background: #2d7332;
+  color: #fff;
+  border-radius: 6px;
+  max-width: 160px;
+  width: auto;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    background: #358ec6;
+}
+
+/* footer */
+footer{
+    padding: 16px 0;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border-top: 1px solid #54bc49;
 }
