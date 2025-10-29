@@ -6,7 +6,7 @@
 /* Page layout grid */
 html, body{
     height: 100%; /* Allows full height page */
-    background-color: #ffffff;
+    background-color: #c4c4c4;
 }
 
 body{
@@ -29,13 +29,14 @@ header{
     justify-content: space-between;
     padding: 16px 0;
     gap: 12px;
-    background-color: #ffffff;
+    background-color: #c4c4c4;
     color: rgb(0, 0, 0);
     border-bottom: 1px solid #54bc49;
 }
 
 header h1{
-    margin: 0; font-size: 1.25rem;
+    margin: 0;
+    font-size: 1.25rem;
 }
 
 nav ul{
@@ -55,13 +56,14 @@ nav a{
 }
 
 nav a:hover{
-    background: #358ec6;
+    background: #54bc49;
 }
 
 /* hero, article and contact */
 .hero-section, .about, .services, .contact{
-    background: #d5d8df;
-    border: 1px solid #ddd;
+    background: #568c47;
+    color: #000000;
+    border: 1px solid #568c47;
     border-radius: 8px;
     padding: 16px;
     margin: 15px;
@@ -69,10 +71,16 @@ nav a:hover{
 
 
 /* hero-section & article */
-.hero-section, .article{
+.hero-section, .about, .services{
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+img{
+    height: auto;
+    width: 250px;
+    display: block;
 }
 
 /* Contact */
@@ -106,7 +114,7 @@ button[type="submit"] {
   align-items: center;   /* vertical center [web:26] */
   padding: 10px 14px;
   border: 1px solid #12847a;
-  background: #2d7332;
+  background: #07bfd4;
   color: #fff;
   border-radius: 6px;
   max-width: 160px;
@@ -120,9 +128,17 @@ button[type="submit"]:hover{
 
 /* footer */
 footer{
-    padding: 16px 0;
+    background: #568c47;
+    color: #ffffff;
+    border: 1px solid #568c47;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 15px;
     text-align: center;
-    color: #000000;
-    background-color: #ffffff;
-    border-top: 1px solid #54bc49;
+    font-size: 1.1rem;
+}
+
+/* Mobile-first */
+@media (min-width: 480px) {
+  body { font-size: 15px; }
 }
